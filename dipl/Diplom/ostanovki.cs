@@ -15,7 +15,7 @@ namespace Diplom
 {
     public partial class ostanovki : Form
     {
-        choosingMarshByOST choosingMarsh = new choosingMarshByOST();
+        choosingMarshByOST choosingMarsh;
         DBconnect dBconnect = new DBconnect();
         buttons buttons = new buttons(); 
         string ostanovka;
@@ -279,6 +279,7 @@ namespace Diplom
         {
             buttons.choosenost = listBox1.SelectedItem.ToString();
             this.Hide();
+            choosingMarsh = new choosingMarshByOST();
             choosingMarsh.Show();
         }
 
