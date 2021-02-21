@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{229D2489-9A03-4E3C-A7D0-2E74C1AED624}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Diplom</RootNamespace>
+    <AssemblyName>Diplom</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="avtoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="avtoForm.Designer.cs">
+      <DependentUpon>avtoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buttons.cs" />
+    <Compile Include="chooseMarsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseMarsh.Designer.cs">
+      <DependentUpon>chooseMarsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="choosingMarshByOST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choosingMarshByOST.Designer.cs">
+      <DependentUpon>choosingMarshByOST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBconnect.cs" />
+    <Compile Include="poik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="poik.Designer.cs">
+      <DependentUpon>poik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="timeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="timeForm.Designer.cs">
+      <DependentUpon>timeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ostanovki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ostanovki.Designer.cs">
+      <DependentUpon>ostanovki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stopsTransport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stopsTransport.Designer.cs">
+      <DependentUpon>stopsTransport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trForm.Designer.cs">
+      <DependentUpon>trForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="avtoForm.resx">
+      <DependentUpon>avtoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooseMarsh.resx">
+      <DependentUpon>chooseMarsh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="choosingMarshByOST.resx">
+      <DependentUpon>choosingMarshByOST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ostanovki.resx">
+      <DependentUpon>ostanovki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="poik.resx">
+      <DependentUpon>poik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stopsTransport.resx">
+      <DependentUpon>stopsTransport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="timeForm.resx">
+      <DependentUpon>timeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trForm.resx">
+      <DependentUpon>trForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
